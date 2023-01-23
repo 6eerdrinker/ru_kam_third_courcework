@@ -1,0 +1,89 @@
+### Поступление 1
+POST http://localhost:8080/api/socks
+Content-Type: application/json
+
+{
+  "color": "GREEN",
+  "size": "S",
+  "cottonRatio": 50,
+  "quantity": 10
+
+}
+
+### Поступление 2
+POST http://localhost:8080/api/socks
+Content-Type: application/json
+
+{
+  "color": "RED",
+  "size": "L",
+  "cottonRatio": 30,
+  "quantity": 16
+
+}
+
+### Поступление 3
+POST http://localhost:8080/api/socks
+Content-Type: application/json
+
+{
+  "color": "RED",
+  "size": "XS",
+  "cottonRatio": 80,
+  "quantity": 25
+
+}
+
+### Поступление 4
+POST http://localhost:8080/api/socks
+Content-Type: application/json
+
+{
+  "color": "BLUE",
+  "size": "M",
+  "cottonRatio": 60,
+  "quantity": 15
+
+}
+
+### Поступление 5
+POST http://localhost:8080/api/socks
+Content-Type: application/json
+
+{
+  "color": "GREEN",
+  "size": "L",
+  "cottonRatio": 80,
+  "quantity": 20
+
+}
+
+### Отгрузка
+PUT http://localhost:8080/api/socks
+Content-Type: application/json
+
+{
+  "color": "RED",
+  "size": "L",
+  "cottonRatio": 30,
+  "quantity": 1
+
+}
+
+###  Всего пар носков
+GET http://localhost:8080/api/socks
+
+###  Наличие носков по размеру
+GET http://localhost:8080/api/socks?size=L
+
+###  Наличие носоков по цвету
+GET http://localhost:8080/api/socks?color=RED
+
+###  Наличие носоков по максимуму содержания хлопка
+GET http://localhost:8080/api/socks?cottonMax=50
+
+###  Наличие носоков по минимуму содержания хлопка
+GET http://localhost:8080/api/socks?cottonMin=50
+
+###  Наличие носоков по всем параметрам
+GET http://localhost:8080/api/socks?color=RED&size=L&cottonMin=30
